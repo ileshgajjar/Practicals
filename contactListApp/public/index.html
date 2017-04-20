@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "controller.js"> </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+<table border = 1px solid black>
+ <tr>  <th> Name </th>
+    <th> Email </th>
+    <th> Action </th>
+  </tr>
+
+  <tr>
+     <td> <input ng-model="contact.name"> </td>
+          <td> <input ng-model="contact.email"> </td>
+               <td> <button ng-click="addContact()"> Add Contact</td>
+                 <td> <button ng-click="update()" > Update </td>
+  </tr>
+
+  <tr ng-repeat="c in conList">
+   <td> {{c.name}} </td>
+   <td>{{c.email}} </td>
+   <td> <button ng-click="remove(c._id)" > Delete </td>
+     <td> <button ng-click="edit(c._id)" > Edit </td>
+ </tr>
+</table>
+</body>
+</html>

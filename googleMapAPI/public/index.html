@@ -1,0 +1,20 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "controller.js"> </script>
+
+<body ng-app="myApp" ng-controller="myController">
+
+
+  zipcode 1: <input ng-model="code.zip1"> <br/>
+
+  zipcode 2 : <input  ng-model="code.zip2"> <br/>
+
+  <button ng-model="dist" ng-click="getDistance()"  > Calculate Distance </button>
+ <br/>
+
+<div ng-show="dist">
+ <p>distance is :
+   {{distance}} </p> </div>
+
+</body>
+</html>
